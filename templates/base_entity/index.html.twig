@@ -1,0 +1,41 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}BaseEntity index{% endblock %}
+
+{% block body %}
+    <h1>BaseEntity index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>MainImage</th>
+                <th>Description</th>
+                <th>DescriptionCurrentEvent</th>
+                <th>MapUrl</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for base_entity in base_entities %}
+            <tr>
+                <td>{{ base_entity.id }}</td>
+                <td>{{ base_entity.mainImage }}</td>
+                <td>{{ base_entity.description }}</td>
+                <td>{{ base_entity.descriptionCurrentEvent }}</td>
+                <td>{{ base_entity.mapUrl }}</td>
+                <td>
+                    <a href="{{ path('base_entity_show', {'id': base_entity.id}) }}">show</a>
+                    <a href="{{ path('base_entity_edit', {'id': base_entity.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('base_entity_new') }}">Create new</a>
+{% endblock %}
