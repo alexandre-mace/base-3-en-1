@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\SiteHistory;
 use App\Repository\BaseEntityRepository;
 use App\Repository\SiteHistoryRepository;
 use App\Repository\SiteLoadingRepository;
@@ -21,8 +20,8 @@ class HomeController extends AbstractController
     )
     {
         $baseEntities = $baseEntityRepository->findAll();
-        $siteHistory = $siteHistoryRepository->findAll()[0];
-        $siteLoading = $siteLoadingRepository->findAll()[0];
+        $siteHistory = $siteHistoryRepository->findAll() ? $siteHistoryRepository->findAll()[0] : null;
+        $siteLoading = $siteLoadingRepository->findAll() ? $siteHistoryRepository->findAll()[0] : null;
 
         return $this->render('home/index.html.twig', [
             'baseEntities' => $baseEntities,
