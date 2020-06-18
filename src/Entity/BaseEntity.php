@@ -4,9 +4,12 @@ namespace App\Entity;
 
 use App\Repository\BaseEntityRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * @ORM\Entity(repositoryClass=BaseEntityRepository::class)
+ * @Vich\Uploadable
  */
 class BaseEntity
 {
@@ -19,8 +22,21 @@ class BaseEntity
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string
      */
-    private $mainImage;
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    private $updatedAt;
 
     /**
      * @ORM\Column(type="text")
@@ -40,18 +56,6 @@ class BaseEntity
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getMainImage(): ?string
-    {
-        return $this->mainImage;
-    }
-
-    public function setMainImage(string $mainImage): self
-    {
-        $this->mainImage = $mainImage;
-
-        return $this;
     }
 
     public function getDescription(): ?string
@@ -88,5 +92,33 @@ class BaseEntity
         $this->mapUrl = $mapUrl;
 
         return $this;
+    }
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
     }
 }
