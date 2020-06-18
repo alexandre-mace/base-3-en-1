@@ -2,13 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>{% block title %}Base sous marine{% endblock %}</title>
     {% block stylesheets %}
-        <link rel="stylesheet" href="/css/style.css">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+        <link href="{{ asset('css/normalize.css') }}" rel="stylesheet"/>
     {% endblock %}
 </head>
 <body>
 {% block body %}{% endblock %}
-{% block javascripts %}{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+{% endblock %}
 </body>
 </html>
