@@ -6,14 +6,18 @@
 
     <title>{% block title %}Base sous marine{% endblock %}</title>
     {% block stylesheets %}
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link href="{{ asset('css/normalize.css') }}" rel="stylesheet"/>
+        <link href="{{ asset('css/font.css') }}" rel="stylesheet"/>
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
     {% endblock %}
 </head>
 <body>
 {% block body %}{% endblock %}
 {% block javascripts %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
 {% endblock %}
 </body>
 </html>

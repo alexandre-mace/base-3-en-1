@@ -5,15 +5,71 @@
 {% block body %}
 <div class="container">
 <header class="header">
-    <div>
-        <p>Base <br/> sous <br/> marine <br/> de Bordeaux</p>
+    <a class="logo__link" href="/">
+        <img alt="logo" class="logo__image" src="{{ asset('images/logo.png') }}" />
+    </a>
+    <div class="nav">
+        <div class="history">
+            <button class="history__button" id="historyOpen">
+                <img class="history__image" src="{{ asset('images/icon-histoire.png') }}" />
+                <p class="history__text">Histoire de la Base</p>
+            </button>
+        </div>
+        <div class="translation">
+            <p class="translation__text">
+                <button class="translation__button">fr</button>
+                /
+                <button class="translation__button">en</button>
+            </p>
+        </div>
+        <div class="history__container">
+            <div class="history__header">
+                <a class="logo__link" href="/">
+                    <img alt="logo" class="logo__image" src="{{ asset('images/logo.png') }}" />
+                </a>
+                <button class="history__button" id="historyClose">
+                    <img alt="close" class="history__close" src="{{ asset('images/icon-fermer.png') }}" />
+                </button>
+            </div>
+            <div class="history__content">
+                <div class="entities">
+                    <img class="entities__image" src="{{ asset('images/mase-base-sous-marine.png') }}" />
+                </div>
+                <div class="explanation">
+                    <h2 class="explanation__title">BASE SOUS MARINE DE BORDEAUX</h2>
+                    <p class="explanation__text">La Base sous-marine de Bordeaux est l’une des cinq bases construites à l’initiative de la Kriegsmarine (marine de guerre allemande) sur le littoral atlantique français. Conçue pour perdurer des siècles, la Base sous-marine venait alors compléter le « Mur de l’Atlantique », vaste complexe défensif en bordure du littoral.</p>
+                    <img class="entities__image-explanation" src="{{ asset('images/mase-base-sous-marine.png') }}" />
+                    <h3 class="explanation__subtitle">Base 3 en 1</h3>
+                    <p class="explanation__text">2020 marque un tournant dans l’histoire de la Base sous-marine avec l’arrivée de la société Culturespace et de ses Bassins de Lumières. Ainsi, la Base sous-marine de Bordeaux est désormais divisée en troisespacesdistincts pour s’inscrire dans le projet base 3 en 1</p>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 <div class="wrapper">
     <div class="content">
-        <p>1</p>
-        <h2>Le centre</h2>
-        <p>Les espaces d'expositions pilotés par la direction.</p>
+        <div class="content__container">
+            <div class="images__container">
+                <img class="content__image" alt="l'image" src="https://via.placeholder.com/494x662" />
+                <div class="content__logo">
+                    <img class="" alt="l'image" src="https://via.placeholder.com/190x62" />
+                </div>
+                <div class="numbers">
+                    <img class="numbers__image" alt="number" src="{{ asset('images/chiffre1.png') }}" />
+                    <img class="numbers__reflect" alt="reflect" src="{{ asset('images/chiffre1-reflet.png') }}" />
+                </div>
+            </div>
+
+            <div class="content__text-wrapper">
+                <div class="content__text">
+                    <h2 class="content__title">Le centre</h2>
+                    <p class="content__description">Les espaces d’expositions pilotés par la Direction générale des affaires culturelles de la Ville de Bordeaux, sont temporairement fermés pour des travaux de rénovation ! </p>
+                    <p class="content__description">Ils ré-ouvriront au premier trimestre 2021 à l’occasion d’une exposition collective intégrée à la saison culturelle Africa 2020 initiée par l’Institut Français.</p>
+                    <p><a>Itineraire</a></p>
+                    <p><a>Site web</a></p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="content">
         <p>2</p>
