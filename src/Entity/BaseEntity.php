@@ -33,6 +33,18 @@ class BaseEntity
     private $imageFile;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $logo;
+
+    /**
+     * @Vich\UploadableField(mapping="images", fileNameProperty="logo")
+     * @var File
+     */
+    private $logoFile;
+
+    /**
      * @ORM\Column(type="datetime")
      * @var \DateTime
      */
@@ -120,5 +132,37 @@ class BaseEntity
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLogo(): string
+    {
+        return $this->logo;
+    }
+
+    /**
+     * @param string $logo
+     */
+    public function setLogo(string $logo): void
+    {
+        $this->logo = $logo;
+    }
+
+    /**
+     * @return File
+     */
+    public function getLogoFile()
+    {
+        return $this->logoFile;
+    }
+
+    /**
+     * @param File $logoFile
+     */
+    public function setLogoFile($logoFile): void
+    {
+        $this->logoFile = $logoFile;
     }
 }

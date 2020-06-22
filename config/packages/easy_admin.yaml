@@ -19,6 +19,7 @@ easy_admin:
                 fields:
                     - { property: 'id' }
                     - { property: 'image', type: 'image', base_path: '%app.path.images%', label: 'Image principale' }
+                    - { property: 'logo', type: 'image', base_path: '%app.path.images%', label: 'Logo' }
                     - { property: 'description' }
                     - { property: 'descriptionCurrentEvent', label: "Description évenement en cours" }
                     - { property: 'mapUrl', label: "Url croquis" }
@@ -26,12 +27,14 @@ easy_admin:
                 fields:
                     - { property: 'id' }
                     - { property: 'image', type: 'image', base_path: '%app.path.images%', label: 'Image principale' }
+                    - { property: 'logo', type: 'image', base_path: '%app.path.images%', label: 'Logo' }
                     - { property: 'description' }
                     - { property: 'descriptionCurrentEvent', label: "Description évenement en cours" }
                     - { property: 'mapUrl', label: "Url croquis" }
             form:
                 fields:
                     - { property: 'imageFile', type: 'vich_image' }
+                    - { property: 'logoFile', type: 'vich_image' }
                     - { property: 'description' }
                     - { property: 'descriptionCurrentEvent', label: "Description évenement en cours" }
                     - { property: 'mapUrl', label: "Url croquis" }
