@@ -6,7 +6,7 @@
 
     <title>{% block title %}Base sous marine{% endblock %}</title>
     {% block stylesheets %}
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+{#        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>#}
         <link href="{{ asset('css/normalize.css') }}" rel="stylesheet"/>
         <link href="{{ asset('css/font.css') }}" rel="stylesheet"/>
         <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
@@ -17,8 +17,13 @@
 {% block javascripts %}
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+{#    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>#}
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/anim.js') }}"></script>
 {% endblock %}
 </body>
 </html>

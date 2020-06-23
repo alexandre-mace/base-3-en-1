@@ -1,21 +1,21 @@
-$('.wrapper').slick({
-  dotsClass: 'dots',
-  mobileFirst: true,
-  centerMode: false,
-  infinite: false,
-  dots: true,
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        centerMode: false,
-        dots: false,
-        centerPadding: '200px',
-      }
-    },
-  ],
-});
+// $('.wrapper').slick({
+//   dotsClass: 'dots',
+//   mobileFirst: true,
+//   centerMode: false,
+//   infinite: false,
+//   dots: true,
+//   arrows: false,
+//   responsive: [
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         centerMode: false,
+//         dots: false,
+//         centerPadding: '200px',
+//       }
+//     },
+//   ],
+// });
 
 $('document').ready(() => {
   const historyButton = document.getElementById('historyOpen');
