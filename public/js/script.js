@@ -29,6 +29,14 @@ $('document').ready(() => {
     $('.history__container').fadeOut();
   })
 
+  var loaderWrapper = document.getElementById('loader-wrapper');
+  var animItem = bodymovin.loadAnimation({
+    wrapper: loaderWrapper,
+    animType: 'svg',
+    loop: false,
+    path: '/anims/anim-logo-base.json'
+  });
+
 });
 
 
@@ -165,4 +173,54 @@ $('.water').ripples({
   resolution: 512,
   dropRadius: 20,
   perturbance: 0.08,
+});
+
+// preloader
+$(document).ready(function () {
+  function loaderSpinner() {
+    $(window).load(function() {
+      var loader = $('.loader');
+      var wHeight = $(window).height();
+      var wWidth = $(window).width();
+      var i = 0;
+      /*Center loader on half screen */
+      loader.css({
+        top: wHeight / 2 - 2.5,
+        left: wWidth / 2 - 200
+      })
+
+      do{
+        loader.animate({
+          width: i
+        },10)
+        i+=40;
+      } while(i <= 400)
+      if(i > 402){
+        loader.animate({
+          left: 0,
+          width: '100%'
+        })
+
+        loader.animate({
+          top: '0',
+          height: '100vh'
+        })
+      }
+
+      /* This line hide loader and show content */
+      setTimeout(function(){
+        ($('.loader-wrapper')).css("background-color", "transparent");
+        (loader).fadeOut();
+        setTimeout(function () {
+          ($('.loader-wrapper')).fadeOut();
+        }, 100)
+        /*Set time in milisec */
+      },2600);
+    });
+
+  }
+
+  ($('.loader-wrapper')).css("display", "block");
+  loaderSpinner();
+
 });
