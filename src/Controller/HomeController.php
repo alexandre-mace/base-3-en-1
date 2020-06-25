@@ -21,7 +21,7 @@ class HomeController extends AbstractController
         $siteHistory = $siteHistoryRepository->findAll() ? $siteHistoryRepository->findAll()[0] : null;
 
         return $this->render('home/index.html.twig', [
-            'baseEntities' => $baseEntities,
+            'baseEntities' => array_reverse($baseEntities),
             'siteHistory' => $siteHistory
         ]);
     }
