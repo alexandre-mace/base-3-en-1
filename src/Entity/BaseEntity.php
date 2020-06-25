@@ -21,7 +21,7 @@ class BaseEntity
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
     private $image;
@@ -33,7 +33,7 @@ class BaseEntity
     private $imageFile;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
     private $logo;
@@ -71,7 +71,7 @@ class BaseEntity
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $mapImage;
 
@@ -184,12 +184,17 @@ class BaseEntity
         return $this->logoFile;
     }
 
-    /**
-     * @param File $logoFile
-     */
-    public function setLogoFile($logoFile): void
+    public function setLogoFile(File $image = null)
     {
-        $this->logoFile = $logoFile;
+        $this->logoFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
     public function getName(): ?string
@@ -224,12 +229,17 @@ class BaseEntity
         return $this->mapImageFile;
     }
 
-    /**
-     * @param File $mapImageFile
-     */
-    public function setMapImageFile($mapImageFile): void
+    public function setMapImageFile(File $image = null)
     {
-        $this->mapImageFile = $mapImageFile;
+        $this->mapImageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
     public function getDescription2(): ?string
