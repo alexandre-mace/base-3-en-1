@@ -50,13 +50,13 @@
     <section class="content one">
         <div class="content__container">
             <div class="images__container">
-                <img class="content__image one" alt="l'image" src="https://via.placeholder.com/494x662" />
+                <img class="content__image one" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[0].image) }}" />
                 <div class="content__logo one">
-                    <img class="" alt="l'image" src="https://via.placeholder.com/190x62" />
+                    <img class="" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[0].logo) }}" />
                 </div>
                 <button class="arrow one">
                     <p><--</p>
-                    <p>Le centre</p>
+                    <p>{{ baseEntities[0].name }}</p>
                 </button>
                 <div class="numbers one">
                     <img class="numbers__image one" alt="number" src="{{ asset('images/chiffre1.png') }}" />
@@ -66,17 +66,17 @@
 
             <div class="content__text-wrapper one">
                 <div class="content__text">
-                    <h2 class="content__title">Le centre 1</h2>
-                    <p class="content__description">Les espaces d’expositions pilotés par la Direction générale des affaires culturelles de la Ville de Bordeaux, sont temporairement fermés pour des travaux de rénovation ! </p>
-                    <p class="content__description">Ils ré-ouvriront au premier trimestre 2021 à l’occasion d’une exposition collective intégrée à la saison culturelle Africa 2020 initiée par l’Institut Français.</p>
-                    <p><a>Itineraire</a></p>
-                    <p><a>Site web</a></p>
+                    <h2 class="content__title">{{ baseEntities[0].name }}</h2>
+                    <p class="content__description">{{ baseEntities[0].description }}</p>
+                    <p class="content__description">{{ baseEntities[0].description2 }}</p>
+                    <p><a href="{{ baseEntities[0].mapUrl }}">Itineraire</a></p>
+                    <p><a href="{{ baseEntities[0].siteUrl }}">Site web</a></p>
                     <div class="current">
                         <div class="current__content">
                             <div class="current__title-container"><p class="current__title">En ce moment</p></div>
-                            <p class="current__text">Saison culturelle Africa 2020 initiée par l’Institut Français.</p>
+                            <p class="current__text">{{ baseEntities[0].descriptionCurrentEvent }}</p>
                         </div>
-                        <img class="current__plan" src="{{ asset('images/plan-centre.png') }}"/>
+                        <img class="current__plan" src="{{ asset('uploads/images/' ~ baseEntities[0].mapImage) }}"/>
                     </div>
                 </div>
             </div>
@@ -85,12 +85,12 @@
     <section class="content two">
         <div class="content__container">
             <div class="images__container">
-                <img class="content__image two" alt="l'image" src="https://via.placeholder.com/494x662" />
+                <img class="content__image two" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[1].image) }}" />
                 <div class="content__logo two">
-                    <img class="" alt="l'image" src="https://via.placeholder.com/190x62" />
+                    <img class="" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[1].logo) }}" />
                 </div>
                 <button class="arrow next two">
-                    <p>Le bassins des lumières</p>
+                    <p>{{ baseEntities[1].name }}</p>
                     <p>--></p>
                 </button>
                 <div class="numbers two">
@@ -105,17 +105,17 @@
 
             <div class="content__text-wrapper two">
                 <div class="content__text two">
-                    <h2 class="content__title">Le centre 2</h2>
-                    <p class="content__description">Les espaces d’expositions pilotés par la Direction générale des affaires culturelles de la Ville de Bordeaux, sont temporairement fermés pour des travaux de rénovation ! </p>
-                    <p class="content__description">Ils ré-ouvriront au premier trimestre 2021 à l’occasion d’une exposition collective intégrée à la saison culturelle Africa 2020 initiée par l’Institut Français.</p>
-                    <p><a>Itineraire</a></p>
-                    <p><a>Site web</a></p>
+                    <h2 class="content__title">{{ baseEntities[1].name }}</h2>
+                    <p class="content__description">{{ baseEntities[1].description }}</p>
+                    <p class="content__description">{{ baseEntities[1].description2 }}</p>
+                    <p><a href="{{ baseEntities[1].mapUrl }}">Itineraire</a></p>
+                    <p><a href="{{ baseEntities[1].siteUrl }}">Site web</a></p>
                     <div class="current">
                         <div class="current__content">
                             <div class="current__title-container"><p class="current__title">En ce moment</p></div>
-                            <p class="current__text">Saison culturelle Africa 2020 initiée par l’Institut Français.</p>
+                            <p class="current__text">{{ baseEntities[1].descriptionCurrentEvent }}</p>
                         </div>
-                        <img class="current__plan" src="{{ asset('images/plan-centre.png') }}"/>
+                        <img class="current__plan" src="{{ asset('uploads/images/' ~ baseEntities[1].mapImage) }}"/>
                     </div>
                 </div>
             </div>
@@ -124,9 +124,9 @@
     <section class="content three">
         <div class="content__container">
             <div class="images__container">
-                <img class="content__image three" alt="l'image" src="https://via.placeholder.com/494x662" />
+                <img class="content__image three" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[2].image) }}" />
                 <div class="content__logo three">
-                    <img class="" alt="l'image" src="https://via.placeholder.com/190x62" />
+                    <img class="" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[2].logo) }}" />
                 </div>
                 <div class="numbers three">
                     <img class="numbers__image three" alt="number" src="{{ asset('images/chiffre1.png') }}" />
@@ -136,17 +136,17 @@
 
             <div class="content__text-wrapper three">
                 <div class="content__text">
-                    <h2 class="content__title">Le centre 3</h2>
-                    <p class="content__description">Les espaces d’expositions pilotés par la Direction générale des affaires culturelles de la Ville de Bordeaux, sont temporairement fermés pour des travaux de rénovation ! </p>
-                    <p class="content__description">Ils ré-ouvriront au premier trimestre 2021 à l’occasion d’une exposition collective intégrée à la saison culturelle Africa 2020 initiée par l’Institut Français.</p>
-                    <p><a>Itineraire</a></p>
-                    <p><a>Site web</a></p>
+                    <h2 class="content__title">{{ baseEntities[2].name }}</h2>
+                    <p class="content__description">{{ baseEntities[2].description }}</p>
+                    <p class="content__description">{{ baseEntities[2].description }}</p>
+                    <p><a href="{{ baseEntities[2].mapUrl }}">Itineraire</a></p>
+                    <p><a href="{{ baseEntities[2].siteUrl }}">Site web</a></p>
                     <div class="current">
                         <div class="current__content">
                             <div class="current__title-container"><p class="current__title">En ce moment</p></div>
-                            <p class="current__text">Saison culturelle Africa 2020 initiée par l’Institut Français.</p>
+                            <p class="current__text">{{ baseEntities[2].descriptionCurrentEvent }}</p>
                         </div>
-                        <img class="current__plan" src="{{ asset('images/plan-centre.png') }}"/>
+                        <img class="current__plan" src="{{ asset('uploads/images/' ~ baseEntities[2].mapImage) }}"/>
                     </div>
                 </div>
             </div>

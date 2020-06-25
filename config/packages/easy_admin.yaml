@@ -1,14 +1,5 @@
 easy_admin:
     entities:
-        SiteLoading:
-            class: App\Entity\SiteLoading
-            label: Chargement du site
-            list:
-                fields:
-                    - { property: 'logoVideo', template: 'logoVideo.html.twig', base_path: '%app.path.videos%' }
-            form:
-                fields:
-                    - { property: 'logoVideoFile', type: 'vich_file' }
         SiteHistory:
             class: App\Entity\SiteHistory
             label: Histoire de la base
@@ -18,25 +9,37 @@ easy_admin:
             list:
                 fields:
                     - { property: 'id' }
+                    - { property: 'name' }
                     - { property: 'image', type: 'image', base_path: '%app.path.images%', label: 'Image principale' }
                     - { property: 'logo', type: 'image', base_path: '%app.path.images%', label: 'Logo' }
                     - { property: 'description' }
+                    - { property: 'siteUrl' }
+                    - { property: 'description2' }
                     - { property: 'descriptionCurrentEvent', label: "Description évenement en cours" }
+                    - { property: 'mapImage', type: 'image', base_path: '%app.path.images%', label: 'Image croquis' }
                     - { property: 'mapUrl', label: "Url croquis" }
             show:
                 fields:
                     - { property: 'id' }
+                    - { property: 'name' }
+                    - { property: 'siteUrl' }
                     - { property: 'image', type: 'image', base_path: '%app.path.images%', label: 'Image principale' }
                     - { property: 'logo', type: 'image', base_path: '%app.path.images%', label: 'Logo' }
                     - { property: 'description' }
+                    - { property: 'description2' }
                     - { property: 'descriptionCurrentEvent', label: "Description évenement en cours" }
+                    - { property: 'mapImage', type: 'image', base_path: '%app.path.images%', label: 'Image croquis' }
                     - { property: 'mapUrl', label: "Url croquis" }
             form:
                 fields:
+                    - { property: 'name' }
                     - { property: 'imageFile', type: 'vich_image' }
                     - { property: 'logoFile', type: 'vich_image' }
                     - { property: 'description' }
+                    - { property: 'description2' }
+                    - { property: 'siteUrl' }
                     - { property: 'descriptionCurrentEvent', label: "Description évenement en cours" }
+                    - { property: 'mapImageFile', type: 'vich_image' }
                     - { property: 'mapUrl', label: "Url croquis" }
     site_name: 'Base 3 en 1'
     user:

@@ -65,6 +65,32 @@ class BaseEntity
      */
     private $mapUrl;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $mapImage;
+
+    /**
+     * @Vich\UploadableField(mapping="images", fileNameProperty="mapImage")
+     * @var File
+     */
+    private $mapImageFile;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description2;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $siteUrl;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -137,7 +163,7 @@ class BaseEntity
     /**
      * @return string
      */
-    public function getLogo(): string
+    public function getLogo()
     {
         return $this->logo;
     }
@@ -145,7 +171,7 @@ class BaseEntity
     /**
      * @param string $logo
      */
-    public function setLogo(string $logo): void
+    public function setLogo($logo)
     {
         $this->logo = $logo;
     }
@@ -164,5 +190,69 @@ class BaseEntity
     public function setLogoFile($logoFile): void
     {
         $this->logoFile = $logoFile;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getMapImage()
+    {
+        return $this->mapImage;
+    }
+
+    public function setMapImage($mapImage)
+    {
+        $this->mapImage = $mapImage;
+
+        return $this;
+    }
+
+    /**
+     * @return File
+     */
+    public function getMapImageFile()
+    {
+        return $this->mapImageFile;
+    }
+
+    /**
+     * @param File $mapImageFile
+     */
+    public function setMapImageFile($mapImageFile): void
+    {
+        $this->mapImageFile = $mapImageFile;
+    }
+
+    public function getDescription2(): ?string
+    {
+        return $this->description2;
+    }
+
+    public function setDescription2(string $description2): self
+    {
+        $this->description2 = $description2;
+
+        return $this;
+    }
+
+    public function getSiteUrl(): ?string
+    {
+        return $this->siteUrl;
+    }
+
+    public function setSiteUrl(string $siteUrl): self
+    {
+        $this->siteUrl = $siteUrl;
+
+        return $this;
     }
 }

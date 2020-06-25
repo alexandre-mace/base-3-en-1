@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Repository\BaseEntityRepository;
 use App\Repository\SiteHistoryRepository;
-use App\Repository\SiteLoadingRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -15,18 +14,15 @@ class HomeController extends AbstractController
      */
     public function index(
         BaseEntityRepository $baseEntityRepository,
-        SiteHistoryRepository $siteHistoryRepository,
-        SiteLoadingRepository $siteLoadingRepository
+        SiteHistoryRepository $siteHistoryRepository
     )
     {
         $baseEntities = $baseEntityRepository->findAll();
         $siteHistory = $siteHistoryRepository->findAll() ? $siteHistoryRepository->findAll()[0] : null;
-        $siteLoading = $siteLoadingRepository->findAll() ? $siteHistoryRepository->findAll()[0] : null;
 
         return $this->render('home/index.html.twig', [
             'baseEntities' => $baseEntities,
-            'siteHistory' => $siteHistory,
-            'siteLoading' => $siteLoading,
+            'siteHistory' => $siteHistory
         ]);
     }
 }
