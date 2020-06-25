@@ -2,6 +2,33 @@ html, * {
     box-sizing: border-box;
 }
 
+html * {cursor:none!important}
+
+.cursor {
+    width: var(--size);
+    height: var(--size);
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 100;
+}
+.cursor--large {
+    --size: 70px;
+    mix-blend-mode: difference;
+    border: 1px solid white;
+}
+.cursor--small {
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    --size: 8px;
+    background: white;
+}
+a:hover {
+    cursor: none !important;
+}
+
 body {
     background-color: #1E1D1C;
     font-family: 'Gotham', sans-serif;
