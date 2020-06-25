@@ -34,7 +34,7 @@ $('document').ready(() => {
     wrapper: loaderWrapper,
     animType: 'svg',
     loop: false,
-    path: '/anims/anim-logo-base.json'
+    path: '/anims/anim-logo-base_v4.json'
   });
 
 });

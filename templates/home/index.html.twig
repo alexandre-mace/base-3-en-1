@@ -50,7 +50,9 @@
     <section class="content one">
         <div class="content__container">
             <div class="images__container">
-                <img class="content__image one" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[0].image) }}" />
+                <a href="{{ baseEntities[0].siteUrl }}">
+                    <img class="content__image one" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[0].image) }}" />
+                </a>
                 <div class="content__logo one">
                     <img class="" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[0].logo) }}" />
                 </div>
@@ -66,11 +68,13 @@
 
             <div class="content__text-wrapper one">
                 <div class="content__text">
-                    <h2 class="content__title">{{ baseEntities[0].name }}</h2>
-                    <p class="content__description">{{ baseEntities[0].description }}</p>
-                    <p class="content__description">{{ baseEntities[0].description2 }}</p>
-                    <p><a href="{{ baseEntities[0].mapUrl }}">Itineraire</a></p>
-                    <p><a href="{{ baseEntities[0].siteUrl }}">Site web</a></p>
+                    <div>
+                        <h2 class="content__title">{{ baseEntities[0].name }}</h2>
+                        <p class="content__description">{{ baseEntities[0].description }}</p>
+                        <p class="content__description">{{ baseEntities[0].description2 }}</p>
+                        <p><a href="{{ baseEntities[0].mapUrl }}">Itineraire</a></p>
+                        <p><a href="{{ baseEntities[0].siteUrl }}">Site web</a></p>
+                    </div>
                     <div class="current">
                         <div class="current__content">
                             <div class="current__title-container"><p class="current__title">En ce moment</p></div>
@@ -85,7 +89,9 @@
     <section class="content two">
         <div class="content__container">
             <div class="images__container">
-                <img class="content__image two" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[1].image) }}" />
+                <a href="{{ baseEntities[1].siteUrl }}">
+                    <img class="content__image two" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[1].image) }}" />
+                </a>
                 <div class="content__logo two">
                     <img class="" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[1].logo) }}" />
                 </div>
@@ -94,22 +100,24 @@
                     <p>--></p>
                 </button>
                 <div class="numbers two">
-                    <img class="numbers__image two" alt="number" src="{{ asset('images/chiffre1.png') }}" />
-                    <img class="numbers__reflect two" alt="reflect" src="{{ asset('images/chiffre1-reflet.png') }}" />
+                    <img class="numbers__image two" alt="number" src="{{ asset('images/chiffre2.png') }}" />
+                    <img class="numbers__reflect two" alt="reflect" src="{{ asset('images/chiffre2-reflet.png') }}" />
                 </div>
                 <div class="numbers twocheh">
-                    <img class="numbers__image twocheh" alt="number" src="{{ asset('images/chiffre1.png') }}" />
-                    <img class="numbers__reflect twocheh" alt="reflect" src="{{ asset('images/chiffre1-reflet.png') }}" />
+                    <img class="numbers__image twocheh" alt="number" src="{{ asset('images/chiffre2.png') }}" />
+                    <img class="numbers__reflect twocheh" alt="reflect" src="{{ asset('images/chiffre2-reflet.png') }}" />
                 </div>
             </div>
 
             <div class="content__text-wrapper two">
                 <div class="content__text two">
-                    <h2 class="content__title">{{ baseEntities[1].name }}</h2>
-                    <p class="content__description">{{ baseEntities[1].description }}</p>
-                    <p class="content__description">{{ baseEntities[1].description2 }}</p>
-                    <p><a href="{{ baseEntities[1].mapUrl }}">Itineraire</a></p>
-                    <p><a href="{{ baseEntities[1].siteUrl }}">Site web</a></p>
+                    <div>
+                        <h2 class="content__title">{{ baseEntities[1].name }}</h2>
+                        <p class="content__description">{{ baseEntities[1].description }}</p>
+                        <p class="content__description">{{ baseEntities[1].description2 }}</p>
+                        <p><a href="{{ baseEntities[1].mapUrl }}">Itineraire</a></p>
+                        <p><a href="{{ baseEntities[1].siteUrl }}">Site web</a></p>
+                    </div>
                     <div class="current">
                         <div class="current__content">
                             <div class="current__title-container"><p class="current__title">En ce moment</p></div>
@@ -124,23 +132,27 @@
     <section class="content three">
         <div class="content__container">
             <div class="images__container">
-                <img class="content__image three" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[2].image) }}" />
+                <a href="{{ baseEntities[2].siteUrl }}">
+                    <img class="content__image three" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[2].image) }}" />
+                </a>
                 <div class="content__logo three">
                     <img class="" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[2].logo) }}" />
                 </div>
                 <div class="numbers three">
-                    <img class="numbers__image three" alt="number" src="{{ asset('images/chiffre1.png') }}" />
-                    <img class="numbers__reflect three" alt="reflect" src="{{ asset('images/chiffre1-reflet.png') }}" />
+                    <img class="numbers__image three" alt="number" src="{{ asset('images/chiffre3.png') }}" />
+                    <img class="numbers__reflect three" alt="reflect" src="{{ asset('images/chiffre3-reflet.png') }}" />
                 </div>
             </div>
 
             <div class="content__text-wrapper three">
                 <div class="content__text">
-                    <h2 class="content__title">{{ baseEntities[2].name }}</h2>
-                    <p class="content__description">{{ baseEntities[2].description }}</p>
-                    <p class="content__description">{{ baseEntities[2].description }}</p>
-                    <p><a href="{{ baseEntities[2].mapUrl }}">Itineraire</a></p>
-                    <p><a href="{{ baseEntities[2].siteUrl }}">Site web</a></p>
+                    <div>
+                        <h2 class="content__title">{{ baseEntities[2].name }}</h2>
+                        <p class="content__description">{{ baseEntities[2].description }}</p>
+                        <p class="content__description">{{ baseEntities[2].description }}</p>
+                        <p><a href="{{ baseEntities[2].mapUrl }}">Itineraire</a></p>
+                        <p><a href="{{ baseEntities[2].siteUrl }}">Site web</a></p>
+                    </div>
                     <div class="current">
                         <div class="current__content">
                             <div class="current__title-container"><p class="current__title">En ce moment</p></div>
