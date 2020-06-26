@@ -5,51 +5,6 @@ $(function () { // wait for document ready
   // we'd only like to use iScroll for mobile...
   if (!isMobile) {
     var controller = new ScrollMagic.Controller();
-
-    // let firstDisappear = new TimelineMax()
-    //   .fromTo(".content__image.one", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
-    //   .fromTo(".content__logo.one", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
-    //   .fromTo(".content__text-wrapper.one", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers.one", 1, {right: 50}, {left: -100, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers__image.one", 1, {height: 350, width: 172, opacity: 1}, {height: 100, width: 50, opacity: 0.25, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers__reflect.one", 1, {height: 350, width: 172, opacity: 1}, {height: 100, width: 50, opacity: 0, ease: Linear.easeNone}, 0)
-    //   .fromTo(".arrow.one", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 0);
-    //
-    // let secondAppear = new TimelineMax()
-    //   .fromTo(".content__image.two", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 0)
-    //   .fromTo(".content__logo.two", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 0)
-    //   .fromTo(".content__text-wrapper.two", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers.two", 1, {right: "calc(-50vw + 50px)"}, {right: 50, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers__image.two", 1, {height: 100, width: 50, opacity: 0.25}, {height: 350, width: 172, opacity: 1, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers__reflect.two", 1, {height: 100, width: 50, opacity: 0}, {height: 350, width: 172, opacity: 1, ease: Linear.easeNone}, 0)
-    //   .fromTo(".arrow.next.two", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers.twocheh", 0, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 1)
-    //
-    //   // .fromTo(".arrow.next.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers__image.three", 1, {opacity: 0}, {opacity: 0.25, ease: Linear.easeNone}, 0);
-    //
-    // let secondDisappear = new TimelineMax()
-    //   .fromTo(".numbers__image.one", 1, {opacity: 0.25}, {opacity: 0, ease: Linear.easeNone}, 0)
-    //   .fromTo(".arrow.one", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
-    //   .to(".numbers.two", 0, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers.twocheh", 1, {right: 50}, {left: "-100px", right: 0, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers__image.twocheh", 1, {height: 350, width: 172, opacity: 1}, {height: 100, width: 50, opacity: 0.25, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers__reflect.twocheh", 1, {height: 350, width: 172, opacity: 1}, {height: 100, width: 50, opacity: 0, ease: Linear.easeNone}, 0)
-    //   .to(".content__image.two", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
-    //   .to(".content__logo.two", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
-    //   .to(".content__text-wrapper.two", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0);
-    //
-    // let thirdAppear = new TimelineMax()
-    //   .fromTo(".numbers.three", 1, {right: "calc(-50vw + 50px)"}, {right: 50, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers__image.three", 1, {height: 100, width: 50, opacity: 0.25}, {height: 350, width: 172, opacity: 1, ease: Linear.easeNone}, 0)
-    //   .fromTo(".numbers__reflect.three", 1, {height: 100, width: 50, opacity: 0}, {height: 350, width: 172, opacity: 1, ease: Linear.easeNone}, 0)
-    //   // .fromTo(".arrow.three", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
-    //   .fromTo(".content__image.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 0)
-    //   .fromTo(".content__logo.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 0)
-    //   .fromTo(".content__text-wrapper.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 0);
-
-
     // define movement of panels
     var wipeAnimation = new TimelineMax()
       .fromTo(".content__image.one", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
@@ -61,17 +16,17 @@ $(function () { // wait for document ready
       .fromTo(".arrow.one", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 0)
 
       .fromTo(".content.two", 1, {pointerEvents: 'none'}, {pointerEvents: 'initial', ease: Linear.easeNone}, 1)
-      .fromTo(".content__image.two", 0, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 1)
+      .fromTo(".content__image.two", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 1)
       .fromTo(".content__logo.two", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 1)
       .fromTo(".content__text-wrapper.two", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 1)
-      .fromTo(".numbers.two", 1, {left: '200%', top: '25%'}, {left: '55%', top: 50, ease: Linear.easeNone}, 1)
+      .fromTo(".numbers.two", 1, {left: 'calc(200% + 20px)', top: '25%'}, {left: '55%', top: 50, ease: Linear.easeNone}, 1)
       .fromTo(".numbers__image.two", 1, {height: 100, opacity: 0.25}, {height: 350, opacity: 1, ease: Linear.easeNone}, 1)
       .fromTo(".numbers__reflect.two", 1, {height: 100, opacity: 0}, {height: 350, opacity: 1, ease: Linear.easeNone}, 1)
       .fromTo(".arrow.next.two", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 1)
       .to(".numbers.twocheh", 0, {opacity: 1, ease: Linear.easeNone}, 2)
-      .fromTo(".arrow.next.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 1)
       .fromTo(".numbers.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 1)
       .fromTo(".numbers__image.three", 1, {opacity: 0}, {opacity: 0.25, ease: Linear.easeNone}, 1)
+      .fromTo(".arrow.three", 1, {pointerEvents: 'none', opacity: 0}, {pointerEvents: 'visible', opacity: 1, ease: Linear.easeNone}, 1)
 
 
       .to(".content__image.two", 1, {opacity: 0, ease: Linear.easeNone}, 2)
@@ -83,26 +38,18 @@ $(function () { // wait for document ready
       .to(".numbers.twocheh", 1, {left: -100, top: '25%', ease: Linear.easeNone}, 2)
       .fromTo(".numbers__image.twocheh", 1, {height: 350}, {height: 100, opacity: 0.25, ease: Linear.easeNone}, 2)
       .fromTo(".numbers__reflect.twocheh", 1,{height: 350}, {height: 100, opacity: 0, ease: Linear.easeNone}, 2)
+      .fromTo(".arrow.prev.two", 1, {opacity: 0, pointerEvents: 'none'}, {opacity: 1, pointerEvents:'visible', ease: Linear.easeNone}, 2)
 
 
       .fromTo(".content.three", 1, {pointerEvents: 'none'}, {pointerEvents: 'initial', ease: Linear.easeNone}, 3)
       .fromTo(".content__image.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 3)
       .fromTo(".content__logo.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 3)
       .fromTo(".content__text-wrapper.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, 3)
-      .fromTo(".numbers.three", 1, {left: '200%', top: '25%'}, {left: '55%', top: 50, ease: Linear.easeNone}, 3)
+      .fromTo(".numbers.three", 1, {left: 'calc(200% + 20px)', top: '25%'}, {left: '55%', top: 50, ease: Linear.easeNone}, 3)
       .fromTo(".numbers__image.three", 1, {height: 100, opacity: 0.25}, {height: 350, opacity: 1, ease: Linear.easeNone}, 3)
       .fromTo(".numbers__reflect.three", 1, {height: 100, opacity: 0}, {height: 350, opacity: 1, ease: Linear.easeNone}, 3)
-      // .fromTo(".arrow.three", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone}, 0)
+      .to(".arrow.three", 1, {opacity: 0, ease: Linear.easeNone}, 3)
 
-
-
-      // .add(zero)
-      // .add(firstDisappear)
-      // .add(secondAppear)
-      // // .fromTo("section.content.two", 1, {opacity:  1}, {opacity: 1, ease: Linear.easeNone})
-      // .add(secondDisappear)
-      // .add(thirdAppear)
-    // .fromTo("section.content.three", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone});
 
     // create scene to pin and link animation
     new ScrollMagic.Scene({
@@ -113,6 +60,28 @@ $(function () { // wait for document ready
       .setPin("#pinContainer")
       .setTween(wipeAnimation)
       .addTo(controller)
+
+    // change behaviour of controller to animate scroll instead of jump
+    // controller.scrollTo(function (newpos) {
+    //   TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
+    // });
+
+    //  bind scroll to anchor links
+    $(document).on("click", "a[href^='#']", function (e) {
+      var id = $(this).attr("href");
+      console.log('id', id)
+      if ($(id).length > 0) {
+        e.preventDefault();
+
+        // trigger scroll
+        controller.scrollTo(id);
+
+        // if supported by the browser we can even update the URL.
+        if (window.history && window.history.pushState) {
+          history.pushState("", document.title, id);
+        }
+      }
+    });
   } else {
     $('.wrapper').slick({
       dotsClass: 'dots',

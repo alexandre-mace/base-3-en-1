@@ -3,7 +3,7 @@
 {% block title %}Base sous marine{% endblock %}
 
 {% block body %}
-<div class="container">
+<div class="container" ìd="container">
 <header class="header">
     <a class="logo__link" href="/">
         <img alt="logo" class="logo__image" src="{{ asset('images/logo.png') }}" />
@@ -50,22 +50,21 @@
     <section class="content one">
         <div class="content__container">
             <div class="images__container">
-                <a href="{{ baseEntities[0].siteUrl }}">
+                <a href="{{ baseEntities[0].siteUrl }}" target="_blank">
                     <img class="content__image one" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[0].image) }}" />
                 </a>
                 <div class="content__logo one">
                     <img class="" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[0].logo) }}" />
                 </div>
-                <button class="arrow one">
-                    <p><--</p>
-                    <p>{{ baseEntities[0].name }}</p>
-                </button>
+                <a class="arrow one">
+                    <img class="arrow__image" alt="arrow" src="{{ asset('images/icon-arrow-left.png') }}" />
+                    <p class="arrow__text">{{ baseEntities[0].name }}</p>
+                </a>
                 <div class="numbers one">
                     <img class="numbers__image one" alt="number" src="{{ asset('images/chiffre1.png') }}" />
-                    <img class="numbers__reflect one" alt="reflect" src="{{ asset('images/chiffre1-reflet.png') }}" />
+                    <img class="numbers__reflect one"  alt="reflect" src="{{ asset('images/chiffre1-reflet.png') }}"  />
                 </div>
             </div>
-
             <div class="content__text-wrapper one">
                 <div class="content__text">
                     <div>
@@ -86,18 +85,22 @@
             </div>
         </div>
     </section>
-    <section class="content two">
+    <section class="content two" id="two">
         <div class="content__container">
             <div class="images__container">
-                <a href="{{ baseEntities[1].siteUrl }}">
+                <a href="{{ baseEntities[1].siteUrl }}" target="_blank">
                     <img class="content__image two" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[1].image) }}" />
                 </a>
                 <div class="content__logo two">
                     <img class="" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[1].logo) }}" />
                 </div>
                 <button class="arrow next two">
-                    <p>{{ baseEntities[1].name }}</p>
-                    <p>--></p>
+                    <p class="arrow__text">{{ baseEntities[1].name }}</p>
+                    <img class="arrow__image" alt="arrow" src="{{ asset('images/icon-arrow-right.png') }}" />
+                </button>
+                <button class="arrow prev two">
+                    <img class="arrow__image" alt="arrow" src="{{ asset('images/icon-arrow-left.png') }}" />
+                    <p class="arrow__text">{{ baseEntities[1].name }}</p>
                 </button>
                 <div class="numbers two">
                     <img class="numbers__image two" alt="number" src="{{ asset('images/chiffre2.png') }}" />
@@ -129,15 +132,19 @@
             </div>
         </div>
     </section>
-    <section class="content three">
+    <section class="content three" id="three">
         <div class="content__container">
             <div class="images__container">
-                <a href="{{ baseEntities[2].siteUrl }}">
+                <a href="{{ baseEntities[2].siteUrl }}" target="_blank">
                     <img class="content__image three" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[2].image) }}" />
                 </a>
                 <div class="content__logo three">
                     <img class="" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[2].logo) }}" />
                 </div>
+                <button class="arrow three">
+                    <p class="arrow__text">{{ baseEntities[2].name }}</p>
+                    <img class="arrow__image" alt="arrow" src="{{ asset('images/icon-arrow-right.png') }}" />
+                </button>
                 <div class="numbers three">
                     <img class="numbers__image three" alt="number" src="{{ asset('images/chiffre3.png') }}" />
                     <img class="numbers__reflect three" alt="reflect" src="{{ asset('images/chiffre3-reflet.png') }}" />

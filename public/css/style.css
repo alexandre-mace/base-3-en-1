@@ -134,6 +134,8 @@ body::-webkit-scrollbar {
     display: none;
     padding: 20px;
     width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 .history__container.active {
@@ -195,7 +197,7 @@ body::-webkit-scrollbar {
 .content {
     width: 100%;
     position: absolute;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     top: 80px;
     left: 0;
     background-color: #1E1D1C;
@@ -293,22 +295,36 @@ body::-webkit-scrollbar {
 }
 
 .arrow.one {
+     position: absolute;
+     top: calc(40% - 130px);
+     left: -140px;
+     display: flex;
+     opacity: 0;
+     z-index: 21;
+     padding-top: 150px;
+     border: 0;
+     background-color: transparent;
+ }
+
+.arrow.prev.two {
     position: absolute;
-    top: calc(40% - 150px);
-    left: -130px;
+    top: calc(40% - 130px);
+    left: -140px;
     display: flex;
     opacity: 0;
     z-index: 21;
     padding-top: 150px;
     border: 0;
     background-color: transparent;
+    pointer-events: none;
 }
 
 
 .arrow.next.two {
+    pointer-events: visible;
     position: absolute;
-    top: calc(40% - 150px);
-    left: calc(100vw - 300px);
+    top: calc(40% - 130px);
+    left: calc(200% + 10px);
     display: flex;
     opacity: 1;
     z-index: 21;
@@ -317,6 +333,36 @@ body::-webkit-scrollbar {
     background-color: transparent;
     width: 120px;
 }
+.arrow.three {
+    position: absolute;
+    top: calc(40% - 130px);
+    left: calc(200% + 10px);
+    display: flex;
+    opacity: 1;
+    z-index: 21;
+    padding-top: 150px;
+    border: 0;
+    background-color: transparent;
+    width: 120px;
+}
+.arrow {
+    display: flex;
+    align-items: center;
+    width: 130px;
+}
+
+.arrow__image {
+    width: 20px;
+    height: 13px;
+}
+
+.arrow__text {
+    font-family: 'Courier', arial, sans-serif;
+    font-size: 12px;
+    color: #FFF;
+    margin: 0 5px;
+}
+
 .numbers.two {
     top: 50px;
     opacity: 1;
@@ -614,6 +660,28 @@ body::-webkit-scrollbar {
     }
     .content__text-wrapper.two {
         opacity: 1;
+    }
+    .numbers__image.one {
+        opacity: 1;
+    }
+    .numbers__image.two {
+        opacity: 1;
+    }
+    .numbers__image.three {
+        opacity: 1;
+    }
+
+    .content__image {
+        left: 20px;
+        z-index: 0;
+    }
+    .content__text-wrapper {
+        z-index: 50;
+    }
+    .numbers {
+        position: absolute;
+        top: 20px;
+        left: 170px;
     }
 }
 

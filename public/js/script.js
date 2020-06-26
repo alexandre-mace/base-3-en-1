@@ -1,32 +1,15 @@
-// $('.wrapper').slick({
-//   dotsClass: 'dots',
-//   mobileFirst: true,
-//   centerMode: false,
-//   infinite: false,
-//   dots: true,
-//   arrows: false,
-//   responsive: [
-//     {
-//       breakpoint: 768,
-//       settings: {
-//         centerMode: false,
-//         dots: false,
-//         centerPadding: '200px',
-//       }
-//     },
-//   ],
-// });
-
 $('document').ready(() => {
   const historyButton = document.getElementById('historyOpen');
   const historyClose = document.getElementById('historyClose');
 
   historyButton.addEventListener('click', () => {
     $('.history__container').fadeIn();
+    $('body').css('overflow', 'hidden')
   });
 
   historyClose.addEventListener('click', () => {
     $('.history__container').fadeOut();
+    $('body').css('overflow', 'initial')
   })
 
   var loaderWrapper = document.getElementById('loader-wrapper');
@@ -37,9 +20,26 @@ $('document').ready(() => {
     path: '/anims/anim-logo-base_v4.json'
   });
 
+  $('.arrow.one').click(() => {
+    const scrollY = $(window).scrollTop();
+    $('html, body').animate({scrollTop: 0}, 800);
+  })
+
+  $('.arrow.prev.two').click(() => {
+    const scrollY = $(window).scrollTop();
+    $('html, body').animate({scrollTop: 1150}, 800);
+  })
+
+  $('.arrow.next.two').click(() => {
+    const scrollY = $(window).scrollTop();
+    $('html, body').animate({scrollTop: 1150}, 800);
+  })
+
+  $('.arrow.three').click(() => {
+    const scrollY = $(window).scrollTop();
+    $('html, body').animate({scrollTop: scrollY + 2300}, 800);
+  })
 });
-
-
 // cursor
 const { gsap } = window;
 
@@ -168,13 +168,6 @@ function handleLinkMouseLeave(e) {
   });
 }
 
-// ripple
-$('.water').ripples({
-  resolution: 512,
-  dropRadius: 20,
-  perturbance: 0.08,
-});
-
 // preloader
 $(document).ready(function () {
   function loaderSpinner() {
@@ -183,6 +176,8 @@ $(document).ready(function () {
       var wHeight = $(window).height();
       var wWidth = $(window).width();
       var i = 0;
+
+      $('body').css("overflow", "hidden");
       /*Center loader on half screen */
       loader.css({
         top: wHeight / 2 - 2.5,
@@ -211,6 +206,7 @@ $(document).ready(function () {
       setTimeout(function(){
         ($('.loader-wrapper')).css("background-color", "transparent");
         (loader).fadeOut();
+        $('body').css('overflow', 'initial')
         setTimeout(function () {
           ($('.loader-wrapper')).fadeOut();
         }, 100)
