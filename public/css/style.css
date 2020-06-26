@@ -715,6 +715,39 @@ body::-webkit-scrollbar {
         position: relative;
         z-index: 40;
     }
+
+    .numbers.twocheh {
+        display: none!important;
+    }
+
+    .numbers.two {
+        position: absolute;
+        top: 20px;
+        left: 170px;
+    }
+    .numbers__image.two {
+        height: 220px;
+    }
+
+    .numbers__reflect.two {
+        opacity: 1;
+        height: 220px;
+    }
+
+    .numbers.three {
+        position: absolute;
+        top: 20px;
+        left: 170px;
+        opacity: 1;
+    }
+    .numbers__image.three {
+        height: 220px;
+    }
+
+    .numbers__reflect.three {
+        opacity: 1;
+        height: 220px;
+    }
 }
 
 
