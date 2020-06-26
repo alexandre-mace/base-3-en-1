@@ -50,7 +50,7 @@
     <section class="content one">
         <div class="content__container">
             <div class="images__container">
-                <a href="{{ baseEntities[0].siteUrl }}" target="_blank">
+                <a class="content__link" href="{{ baseEntities[0].siteUrl }}" target="_blank">
                     <img class="content__image one" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[0].image) }}" />
                 </a>
                 <div class="content__logo one">
@@ -71,8 +71,8 @@
                         <h2 class="content__title">{{ baseEntities[0].name }}</h2>
                         <p class="content__description">{{ baseEntities[0].description }}</p>
                         <p class="content__description">{{ baseEntities[0].description2 }}</p>
-                        <p><a href="{{ baseEntities[0].mapUrl }}">Itineraire</a></p>
-                        <p><a href="{{ baseEntities[0].siteUrl }}">Site web</a></p>
+                        <p><a class="link" href="{{ baseEntities[0].mapUrl }}">Itineraire</a></p>
+                        <p><a class="link link--web" href="{{ baseEntities[0].siteUrl }}">Site web</a></p>
                     </div>
                     <div class="current">
                         <div class="current__content">
@@ -88,7 +88,7 @@
     <section class="content two" id="two">
         <div class="content__container">
             <div class="images__container">
-                <a href="{{ baseEntities[1].siteUrl }}" target="_blank">
+                <a class="content__link" href="{{ baseEntities[1].siteUrl }}" target="_blank">
                     <img class="content__image two" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[1].image) }}" />
                 </a>
                 <div class="content__logo two">
@@ -118,8 +118,8 @@
                         <h2 class="content__title">{{ baseEntities[1].name }}</h2>
                         <p class="content__description">{{ baseEntities[1].description }}</p>
                         <p class="content__description">{{ baseEntities[1].description2 }}</p>
-                        <p><a href="{{ baseEntities[1].mapUrl }}">Itineraire</a></p>
-                        <p><a href="{{ baseEntities[1].siteUrl }}">Site web</a></p>
+                        <p><a class="link" href="{{ baseEntities[1].mapUrl }}">Itineraire</a></p>
+                        <p><a class="link link--web" href="{{ baseEntities[1].siteUrl }}">Site web</a></p>
                     </div>
                     <div class="current">
                         <div class="current__content">
@@ -135,7 +135,7 @@
     <section class="content three" id="three">
         <div class="content__container">
             <div class="images__container">
-                <a href="{{ baseEntities[2].siteUrl }}" target="_blank">
+                <a class="content__link" href="{{ baseEntities[2].siteUrl }}" target="_blank">
                     <img class="content__image three" alt="l'image" src="{{ asset('uploads/images/' ~ baseEntities[2].image) }}" />
                 </a>
                 <div class="content__logo three">
@@ -157,8 +157,8 @@
                         <h2 class="content__title">{{ baseEntities[2].name }}</h2>
                         <p class="content__description">{{ baseEntities[2].description }}</p>
                         <p class="content__description">{{ baseEntities[2].description }}</p>
-                        <p><a href="{{ baseEntities[2].mapUrl }}">Itineraire</a></p>
-                        <p><a href="{{ baseEntities[2].siteUrl }}">Site web</a></p>
+                        <p><a class="link" href="{{ baseEntities[2].mapUrl }}">Itineraire</a></p>
+                        <p><a class="link link--web" href="{{ baseEntities[2].siteUrl }}">Site web</a></p>
                     </div>
                     <div class="current">
                         <div class="current__content">

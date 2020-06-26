@@ -262,7 +262,7 @@ body::-webkit-scrollbar {
 
 .current__content {
     position: absolute;
-    left: 0;
+    left: -50px;
     bottom: 20px;
     text-align: left;
 }
@@ -289,6 +289,9 @@ body::-webkit-scrollbar {
     font-size: 12px;
     margin-top: 20px;
     max-width: 150px;
+    font-family: 'Metropolis Extra', sans-serif;
+    font-weight: 200;
+    font-style: italic;
 }
 .current__plan {
     display: none;
@@ -436,6 +439,9 @@ body::-webkit-scrollbar {
 .content__text-wrapper.three {
     opacity: 0;
 }
+.link {
+    color: #fff;
+}
 
 .dots {
     display: flex;
@@ -579,15 +585,18 @@ body::-webkit-scrollbar {
         z-index: 50;
         margin: 0;
         flex: 1;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .content__text {
-        margin-left: 120px;
+        /*margin-left: 120px;*/
         margin-right: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+        width: 60%;
     }
 
     .current {
@@ -629,12 +638,15 @@ body::-webkit-scrollbar {
         margin-left: 72px;
         margin-right: 0;
     }
+    .link--web {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .content {
         position: relative;
-        height: initial;
+        height: 100vh;
         padding: 0;
         width: initial;
     }
@@ -677,11 +689,31 @@ body::-webkit-scrollbar {
     }
     .content__text-wrapper {
         z-index: 50;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        margin: 40px 20px 50px 70px;
     }
     .numbers {
         position: absolute;
         top: 20px;
         left: 170px;
+    }
+    .current__plan {
+        display: none!important;
+    }
+
+    .current__content {
+        bottom: -70px;
+    }
+
+    .current__link {
+        pointer-events: none;
+    }
+
+    .content__logo {
+        position: relative;
+        z-index: 40;
     }
 }
 
