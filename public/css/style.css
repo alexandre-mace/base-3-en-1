@@ -633,9 +633,9 @@ body::-webkit-scrollbar {
     .current__plan {
         display: block;
         position: relative;
-        width: calc(100% - 70px);
+        width: 168px;
         height: auto;
-        margin-left: 72px;
+        margin-left: 20px;
         margin-right: 0;
     }
     .link--web {
